@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+.logo{
+  width: 150px;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.open-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* translate x to move along x-axis */
+  transform: translateX(-100%);
+  /* transition when switching to .nav.visible */
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+/* 3 boxes red, white, black
+make them come out one after another */
+
+.nav-black {
+  background-color: rgb(34, 31, 31);
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  /* make it wait before it fires-off */
+  transition-delay: 0.3s;
+}
+
+.nav-black.nav.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  background-color: rgb(229, 9, 20);
+  width: 95%;
+  transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+  transition-delay: 0.2s;
+}
+
+
+.nav-white {
+  background-color: #fff;
+  width: 95%;
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.nav-white.nav.visible {
+  transition-delay: 0.3s;
+}
+
+.close-btn {
+  /* Make it a little wider */
+  opacity: 0.3;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 20px 0;
+}
+
+ .list :hover  {
+  color: red;
+} 
+
+div#more_info{
+  opacity: 0.2;
+  transition: 0.4s;
+}
+
+div#more_info:hover  {
+  color: white;
+  opacity: 1;
+  transition: 0.4s ease-in;
+  scale: (1.5);
+}
+
+
+.list li a{
+  color: rgb(34, 31, 31);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list ul {
+  list-style-type: none;
+  /* Stick out a bit to left
+  "make it fetched to left" */
+  padding-left: 20px;
+}
