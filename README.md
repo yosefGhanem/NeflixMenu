@@ -1,2 +1,2 @@
 # NeflixMenu
-Click on hamburger menu to give you cool effect
+Click on a hamburger menu to give you cool effect
